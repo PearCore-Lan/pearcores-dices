@@ -1,1 +1,50 @@
-
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>梨核骰子_梨核警告</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="LiHe.ico">
+    <link rel="stylesheet" type="text/css" href="pearpits-dices.css">
+</head>
+<body>
+    <div id="top">
+        <div id="values">
+            <div id="value_health">
+                <p>血量：<span id="health_value">100</span>%</p>
+            </div>
+            <div id="value_rounds">
+                <p>回合：<span id="rounds_value">1</span></p>
+            </div>
+            <div id="value_pearpits">
+                <p>梨核：<span id="pearpits_value">1</span></p>
+            </div>
+            <div id="value_pears">
+                <p>梨： <span id="pears_value">0</span></p>
+            </div>
+        </div>
+        <div id="rules">
+            <h3>梨核骰子 规则：</h3>
+            <p>[1]回合开始时，你可以在右下角选择“大”或者“小”，随后左下角的骰子摇出随机点数。<br>
+                [2]三个骰子总和如果大于9点，则为“大”；如果小于10点，则为“小”。<br>
+                [3]如果骰盅结果与你依照[1]所选的结果相符，则你有50%的概率获得道具“梨”；反之则被X个梨核砸，并失去10%X的“血量”（X为左上角数值区的“梨核”数值）。<br>
+                [4]若你的“血量”不为100%，则你可以吃1个“梨”，以恢复10%的“血量”。<br>
+                [5]“梨核”默认数量为1，且其数量会增加X。回合结束时，其数量恢复默认值（X为本回合你吃梨的数量）。<br>
+                [6]当你的“血量”小于等于0%时，游戏结束，你无法通过除“重新开始”之外的任何方式恢复“血量”。</p>
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="dices">
+            <img id="first" alt="ERROR!" src="1.jpg" width="64">
+            <img id="second" alt="ERROR!" src="1.jpg" width="64">
+            <img id="third" alt="ERROR!" src="1.jpg" width="64">
+        </div>
+        <div id="options">
+            <div id="decide">
+                <button id="big" onclick="big()">大</button>
+                <button id="small" onclick="small()">小</button>
+            </div>
+            <button id="eat" onclick="eat()">吃梨</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>

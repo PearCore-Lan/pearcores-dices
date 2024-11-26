@@ -1,0 +1,79 @@
+div#top {
+    height: 55%;
+    background-color: #00D7FF;
+    display: flex;
+}
+
+div#bottom {
+    height: 100%;
+    display: flex;
+}
+
+div#values {
+    width: 35%;
+    display: grid;
+}
+
+div#value_health {
+    background-color: #FF0000;
+}
+
+div#value_rounds {
+    background-color: #00A7FF;
+}
+
+div#value_pearpits {
+    background-color: #FFFFAC;
+}
+
+div#value_pears {
+    background-color: #FFFF00;
+}
+
+div#rules {
+    width: 65%;
+}
+
+h3 {
+    font-family: "FangSong";
+}
+
+p {
+    font-size: 15px;
+    font-family: "FangSong";
+}
+
+div#dices {
+    width: 40%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+div#options {
+    display: flex;
+    height: 400px;
+    background-color: #000000;
+}
+
+div#decide {
+    width: 700px;
+    display: inline-grid;
+}
+
+button#big {
+    border-radius: 5px;
+    background-color:#F4A0A0;
+}
+
+button#small {
+    border-radius: 5px;
+    background-color:#F4A0A0;
+}
+
+button#eat {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #FFFFAC;
+}
