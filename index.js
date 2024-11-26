@@ -28,8 +28,8 @@ async function big() {
     }
     else {
         document.getElementById("health_value").innerHTML = Number(document.getElementById("health_value").innerText) - Number(document.getElementById("pearpits_value").innerText)*10;
-        document.getElementById("pearpits_value").innerHTML = 1;
     }
+    document.getElementById("pearpits_value").innerHTML = 1;
 
     if(Number(document.getElementById("health_value").innerText) <= 0) {
         window.alert("游戏结束，你活了" + Number(document.getElementById("rounds_value").innerText) + "回合！");
@@ -74,7 +74,7 @@ async function small() {
 }
 
 function eat() {
-    if(Number(document.getElementById("pears_value").innerText) == 0) {
+    if(Number(document.getElementById("pears_value").innerText) == 0 || Number(document.getElementById("health_value").innerText) == 100) {
         return;
     }
     document.getElementById("health_value").innerHTML = Number(document.getElementById("health_value").innerText) + 10;
