@@ -4,6 +4,7 @@ function sleep(ms) {
 
 async function big() {
     document.getElementById("options").style.display = "none";
+
     var rounds = document.getElementById("rounds_value");
     var first_img = document.getElementById("first");
     var second_img = document.getElementById("second");
@@ -36,11 +37,13 @@ async function big() {
         window.alert("游戏结束，你活了" + Number(document.getElementById("rounds_value").innerText) + "回合！");
         window.open("https://pearpit.github.io/pearpits-dices");
     }
+
     document.getElementById("options").style.display = "flex";
 }
 
 async function small() {
     document.getElementById("options").style.display = "none";
+
     var rounds = document.getElementById("rounds_value");
     var first_img = document.getElementById("first");
     var second_img = document.getElementById("second");
@@ -74,6 +77,7 @@ async function small() {
         window.alert("游戏结束，你活了" + Number(document.getElementById("rounds_value").innerText) + "回合！");
         window.open("https://pearpit.github.io/pearpits-dices");
     }
+
     document.getElementById("options").style.display = "flex";
 }
 
