@@ -35,7 +35,7 @@ async function big() {
 
     if(Number(document.getElementById("health_value").innerText) <= 0) {
         window.alert("游戏结束，你活了" + Number(document.getElementById("rounds_value").innerText) + "回合！");
-        window.open("https://pearpit.github.io/pearpits-dices", "_self");
+        location.reload();
     }
 
     document.getElementById("options").style.display = "flex";
