@@ -3,6 +3,10 @@ const rv = document.getElementById("rounds_value");
 const ppv = document.getElementById("pearpits_value");
 const pv = document.getElementById("pears_value");
 
+new Image().src = "https://pearpit.github.io/pearpits-dices/4.jpg";
+new Image().src = "https://pearpit.github.io/pearpits-dices/5.jpg";
+new Image().src = "https://pearpit.github.io/pearpits-dices/6.jpg";
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
