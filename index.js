@@ -1,3 +1,8 @@
+const hv = document.getElementById("health_value");
+const rv = document.getElementById("rounds_value");
+const ppv = document.getElementById("pearpits_value");
+const pv = document.getElementById("pears_value");
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -5,18 +10,15 @@ function sleep(ms) {
 async function big() {
     document.getElementById("options").style.display = "none";
 
-    var rounds = document.getElementById("rounds_value");
     var first_img = document.getElementById("first");
     var second_img = document.getElementById("second");
     var third_img = document.getElementById("third");
-
-    rounds.innerHTML = Number(rounds.innerText) + 1;
 
     var first = Math.round(Math.random()*5+1);
     var second = Math.round(Math.random()*5+1);
     var third = Math.round(Math.random()*5+1);
 
-    const audio = new Audio("shake.wav");
+    const audio = new Audio("shake.mp3");
     audio.play();
     await sleep(4000);
 
@@ -39,6 +41,7 @@ async function big() {
     }
 
     document.getElementById("options").style.display = "flex";
+    rv.innerHTML = Number(rv.innerText) + 1;
 }
 
 async function small() {
@@ -55,7 +58,7 @@ async function small() {
     var second = Math.round(Math.random()*5+1);
     var third = Math.round(Math.random()*5+1);
 
-    const audio = new Audio("shake.wav");
+    const audio = new Audio("shake.mp3");
     audio.play();
     await sleep(4000);
 
