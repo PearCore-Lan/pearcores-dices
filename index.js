@@ -7,6 +7,22 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function shv(value) {
+    hv.innerHTML = Number(value);
+}
+
+function srv(value) {
+    rv.innerHTML = Number(value);
+}
+
+function sppv(value) {
+    ppv.innerHTML = Number(value);
+}
+
+function spv(value) {
+    pv.innerHTML = Number(value);
+}
+
 async function big() {
     document.getElementById("options").style.display = "none";
 
