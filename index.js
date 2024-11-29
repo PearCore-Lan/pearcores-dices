@@ -2,6 +2,7 @@ const hv = document.getElementById("health_value");
 const rv = document.getElementById("rounds_value");
 const ppv = document.getElementById("pearpits_value");
 const pv = document.getElementById("pears_value");
+const sv = document.getElementById("substitutes_value");
 
 new Image().src = "https://pearpit.github.io/pearpits-dices/4.jpg";
 new Image().src = "https://pearpit.github.io/pearpits-dices/5.jpg";
@@ -25,6 +26,10 @@ function sppv(value) {
 
 function spv(value) {
     pv.innerHTML = Number(value);
+}
+
+function ssv(value) {
+    sv.innerHTML = Number(value);
 }
 
 async function big() {
@@ -51,7 +56,13 @@ async function big() {
             pv.innerHTML = Number(pv.innerText) + 1;
     }
     else {
-        hv.innerHTML = Number(hv.innerText) - Number(ppv.innerText)*10;
+        if(Number(hv.innerText) <= Number(ppv.innerText)*10 && Number(sv.innerText) > 0) {
+            sv.innerHTML = Number(sv.innerText) - 1;
+        }
+        else
+            hv.innerHTML = Number(hv.innerText) - Number(ppv.innerText)*10;
+        if(Math.round(Math.random()*5) == 3)
+            sv.innerHTML = Number(sv.innerText) + 1;
     }
     ppv.innerHTML = 1;
 
@@ -89,9 +100,15 @@ async function small() {
         }
     }
     else {
-        hv.innerHTML = Number(hv.innerText) - Number(ppv.innerText)*10;
-        ppv.innerHTML = 1;
+        if(Number(hv.innerText) <= Number(ppv.innerText)*10 && Number(sv.innerText) > 0) {
+            sv.innerHTML = Number(sv.innerText) - 1;
+        }
+        else
+            hv.innerHTML = Number(hv.innerText) - Number(ppv.innerText)*10;
+        if(Math.round(Math.random()*5) == 3)
+            sv.innerHTML = Number(sv.innerText) + 1;
     }
+    ppv.innerHTML = 1;
 
     if(Number(hv.innerText) <= 0) {
         window.alert("游戏结束，你活了" + Number(rv.innerText) + "回合！");
