@@ -4,9 +4,9 @@ const ppv = document.getElementById("pearpits_value");
 const pv = document.getElementById("pears_value");
 const sv = document.getElementById("substitutes_value");
 
-new Image().src = "https://pearpit.github.io/pearpits-dices/4.jpg";
-new Image().src = "https://pearpit.github.io/pearpits-dices/5.jpg";
-new Image().src = "https://pearpit.github.io/pearpits-dices/6.jpg";
+new Image().src = "https://pearpit.github.io/pearpits-dices/4.svg";
+new Image().src = "https://pearpit.github.io/pearpits-dices/5.svg";
+new Image().src = "https://pearpit.github.io/pearpits-dices/6.svg";
 
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -47,9 +47,9 @@ async function big() {
     audio.play();
     await sleep(4000);
 
-    first_img.src = String(first) + ".jpg";
-    second_img.src = String(second) + ".jpg";
-    third_img.src = String(third) + ".jpg";
+    first_img.src = String(first) + ".svg";
+    second_img.src = String(second) + ".svg";
+    third_img.src = String(third) + ".svg";
 
     if(first+second+third > 9) {
         if(Math.round(Math.random()) == 1)
@@ -90,9 +90,9 @@ async function small() {
     audio.play();
     await sleep(4000);
 
-    first_img.src = String(first) + ".jpg";
-    second_img.src = String(second) + ".jpg";
-    third_img.src = String(third) + ".jpg";
+    first_img.src = String(first) + ".svg";
+    second_img.src = String(second) + ".svg";
+    third_img.src = String(third) + ".svg";
 
     if(first+second+third < 10) {
         if(Math.round(Math.random()) == 1) {
